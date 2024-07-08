@@ -8,4 +8,4 @@ Currently only Recap, but more soon
 
 # Docs? 
 
-http://csolver.rf.gd for docs/examples
+http://csolver.xyz for documentation
