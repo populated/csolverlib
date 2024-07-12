@@ -1,5 +1,5 @@
 import warnings
-from CSolver.hcap.solver import Solver
+from CSolver.Hcap.hcap import Solver
 import time
 from colorama import Fore
 import math
@@ -30,9 +30,11 @@ def hCap():
     while not stop_signal:
         start = time.time()
         cap = Solver(
+            api_key="csolver api key"
             sitekey='f5561ba9-8f1e-40ca-9b5b-a0b3f719ef34', # sitekey to match the url provided
             site='discord.com', # Site the captcha is on
             proxy="user:pass@ip:port" # Can be 'None' or ''
+            rqdata="" # Can be 'None' or ''
         ).solve() # solve the captcha
         end = time.time()
         elapsed = end - start
