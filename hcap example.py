@@ -29,8 +29,8 @@ def hCap():
     global success_count, fail_count, total_attempts, total_time
     while not stop_signal:
         start = time.time()
-        cap = Solver.solve(
-            api_key="csolver api key"
+        solver = Solver("api key")
+        cap = solver.solve(
             sitekey='f5561ba9-8f1e-40ca-9b5b-a0b3f719ef34', # sitekey to match the url provided
             site='discord.com', # Site the captcha is on
             proxy="user:pass@ip:port" # Can be 'None' or ''
