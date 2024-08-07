@@ -4,7 +4,7 @@ Simple Captcha Solving Service
 
 # What CAPTCHAs are supported?
 
-Currently only Recap, but more soon 
+Currently only Recaptcha V3 and hCaptcha, but more soon 
 
 # Docs? 
 
