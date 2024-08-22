@@ -1,5 +1,5 @@
 import warnings
-from CSolver.Hcap.hcap import Solver
+from csolver import Solver
 import time
 from colorama import Fore
 import math
