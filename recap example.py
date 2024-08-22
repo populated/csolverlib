@@ -1,14 +1,14 @@
 from threading import Thread
 import time
 from colorama import Fore
-from CSolver.RecapV3.recap import Solver # import ReCap solver from CSolver 
+from csolver import Solver # import ReCap solver from CSolver 
 
 solver = Solver() # initialize solver
 
 def recap():
     while True:
         start = time.time()
-        cap = solver.solve( # Sovle the captcha
+        cap = solver.solve_recap( # Solve the captcha
             False, # Is the captcha invisible? 
             "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6LeMrv8ZAAAAAIcvo5HKvdj1lxtUdHnS13jUCulQ&co=aHR0cHM6Ly9wbGF5Lmhib21heC5jb206NDQz&hl=en&v=MuIyr8Ej74CrXhJDQy37RPBe&size=invisible&cb=f9q60qxahq1b", # The POST request to recaptcha [ also tell you if it is invisible or not ] 
             "https://www.google.com/recaptcha/enterprise/reload?k=6LeMrv8ZAAAAAIcvo5HKvdj1lxtUdHnS13jUCulQ" # The recaptcha GET request
