@@ -113,10 +113,7 @@ class Solver:
             
         token: str = token_match.group(1)
         uv: dict = parse_qs(urlparse(anchor).query)
-
         v, k, co = uv["v"][0], uv["k"][0], uv["co"][0]
-
-        data: str = f"v={v}&reason=q&c={token}&k={k}&co={co}&hl=en&size={'invisible' if invisible else 'visible'}"
 
         headers.update({
             "Referer": resp.url,
@@ -126,7 +123,7 @@ class Solver:
         resp = requests.post(
             reload, 
             headers=headers, 
-            data=data
+            data=f"v={v}&reason=q&c={token}&k={k}&co={co}&hl=en&size={'invisible' if invisible else 'visible'}"
         )
         resp.raise_for_status()
 
