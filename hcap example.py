@@ -30,7 +30,7 @@ def hCap():
     while not stop_signal:
         start = time.time()
         solver = Solver("api key")
-        cap = solver.solve(
+        cap = solver.solve_hcap(
             task="hCaptchaEnterprise",
             sitekey='f5561ba9-8f1e-40ca-9b5b-a0b3f719ef34', # sitekey to match the url provided
             site='discord.com', # Site the captcha is on
